@@ -1,0 +1,21 @@
+export interface Contractor {
+  id: string;
+  anon_name: string;
+  categories: string[];
+  city: string;
+  price_from_kzt: number | null;
+  event_formats: string[];
+  languages: string[];
+  max_hours: number | null;
+  busy_dates: string[];
+  description: string;
+  synthetic?: boolean;
+}
+
+export interface MatchResponse {
+  matches: {
+    contractor: Contractor;
+    explanation: string;
+  }[];
+  message: string | null;
+}
